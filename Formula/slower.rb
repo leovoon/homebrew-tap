@@ -1,8 +1,8 @@
 class Slower < Formula
   desc "Periodic walk reminder"
   homepage "https://github.com/leovoon/slower"
-  url "https://github.com/leovoon/slower/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "fb0aaac177c643fa923810b282571e3a19318401ff18eb0f6bb00fc11701bfee"
+  url "https://github.com/leovoon/slower/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "958b9179a4a35c081634975bfc85e29e753dc644f832696aa8e3e5d59ae3233a"
   license "MIT"
 
   depends_on :macos
