@@ -1,16 +1,16 @@
 class Slower < Formula
   desc "Periodic walk reminder"
   homepage "https://github.com/leovoon/slower"
-  url "https://github.com/leovoon/slower/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "8b515c48f6c044fc33fc4adfa347879c85bbb8e4accede37275f4284747ece6c"
+  url "https://github.com/leovoon/slower/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "b6262b1bc6b269e168e069813970b3084fb9838d43b8c08f29e8261f12d868b3"
   license "MIT"
 
   depends_on :macos
+  depends_on "vlang" => :build
 
   def install
-    bin.install "slower.sh" => "slower"
-    bin.install "launchd-setup.sh"
-    pkgshare.install "com.leovoon.slower.plist.example"
+    system "v", "-prod", "-o", "slower", "./cmd/slower/main.v"
+    bin.install "slower"
     doc.install "README.md"
   end
 
